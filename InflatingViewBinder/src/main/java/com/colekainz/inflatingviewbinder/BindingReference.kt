@@ -12,10 +12,16 @@ internal class BindingReference<V : ViewBinding>(_inflate: InflateViewBinding<V>
     }
 
     fun registerUnbinder(fragment: Fragment) {
+
         fragment.parentFragmentManager.registerFragmentLifecycleCallbacks(object : FragmentManager.FragmentLifecycleCallbacks() {
             override fun onFragmentViewDestroyed(fm: FragmentManager, f: Fragment) {
                 super.onFragmentViewDestroyed(fm, f)
                 binding = null
+            }
+
+            override fun onFragmentDestroyed(fm: FragmentManager, f: Fragment) {
+                super.onFragmentDestroyed(fm, f)
+                fragment.parentFragmentManager.unregisterFragmentLifecycleCallbacks(this)
             }
         }, false)
     }

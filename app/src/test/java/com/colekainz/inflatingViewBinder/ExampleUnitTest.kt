@@ -1,4 +1,4 @@
-package com.colekainz.InflatingViewBinder
+package com.colekainz.inflatingViewBinder
 
 import org.junit.Test
 

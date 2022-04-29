@@ -1,6 +1,6 @@
 # inflating-view-binder
 
-Finally! A fragment view binder that uses inflate!! This is a truely one-line view binding solution, provided you make use of a base fragment.
+Finally! A fragment view binder that uses inflate!! This is a true one-line view binding solution, provided you make use of a base fragment.
 
 Setting up the base code is as easy as adding the follow to your base fragment:
 
@@ -22,7 +22,7 @@ abstract class BaseFragment: Fragment() {
 }
 ```
 
-With this you fragments can be as neat and clean as:
+With this your fragments can be as neat and clean as:
 
 ```
 class MainFragment : BaseFragment() {

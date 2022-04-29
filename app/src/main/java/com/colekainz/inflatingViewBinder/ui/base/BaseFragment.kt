@@ -1,4 +1,4 @@
-package com.colekainz.InflatingViewBinder.ui.base
+package com.colekainz.inflatingViewBinder.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

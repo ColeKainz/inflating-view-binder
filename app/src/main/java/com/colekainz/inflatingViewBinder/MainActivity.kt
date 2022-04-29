@@ -1,8 +1,8 @@
-package com.colekainz.InflatingViewBinder
+package com.colekainz.inflatingViewBinder
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.colekainz.InflatingViewBinder.ui.main.MainFragment
+import com.colekainz.inflatingViewBinder.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
