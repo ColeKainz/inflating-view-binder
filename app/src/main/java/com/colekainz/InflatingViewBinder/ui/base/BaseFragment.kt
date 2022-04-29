@@ -17,9 +17,9 @@ abstract class BaseFragment: Fragment() {
         return binder.inflate(inflater, container)
     }
 
-    fun <V : ViewBinding> bind(viewBindingKClass: KClass<V>): ReadOnlyProperty<Fragment, V> {
-        return binder.bind(viewBindingKClass)
+    fun <V : ViewBinding> viewBinding(viewBindingKClass: KClass<V>): ReadOnlyProperty<Fragment, V> {
+        return binder.viewBinding(viewBindingKClass)
     }
 
-    inline fun <reified V : ViewBinding> BaseFragment.bind(): ReadOnlyProperty<Fragment, V> = bind(V::class)
+    inline fun <reified V : ViewBinding> BaseFragment.viewBinding(): ReadOnlyProperty<Fragment, V> = viewBinding(V::class)
 }

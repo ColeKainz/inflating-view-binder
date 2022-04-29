@@ -21,7 +21,7 @@ class FragmentViewBinder {
         return binding.root
     }
 
-    fun <V : ViewBinding> bind(viewBindingKClass: KClass<V>): ReadOnlyProperty<Fragment, V> {
+    fun <V : ViewBinding> viewBinding(viewBindingKClass: KClass<V>): ReadOnlyProperty<Fragment, V> {
         val inflate = viewBindingKClass.inflateMethod
         this.bindingReference = BindingReference(inflate)
         return FragmentViewBindingDelegate(bindingReference) as ReadOnlyProperty<Fragment, V>
